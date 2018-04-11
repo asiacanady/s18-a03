@@ -26,7 +26,7 @@ Write the following functions in order to complete part B. Put them in a file ca
     ```
 
 ## B: Analysis of salaries
-Repeat the analysis from assignment 1 using the `helper` module you developed in part A. Each question will 
+Repeat the analysis from assignment 1 using the `helper` module you developed in part A. Put your solution to B.1 in `q1.py`, B.2 in `q2.py` and so on. Each question has a template python script to get you started.
 
 1. How many employees does the city have (4 points)?
 2. How many full time employees (4 points)?
