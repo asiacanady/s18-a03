@@ -1,4 +1,4 @@
-# Q8: How common is the most common last name? Which is it?
+# Q7: How common is the most common last name? Which is it?
 import helper
 
 data = helper.read_salaries()
