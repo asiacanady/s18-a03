@@ -2,21 +2,14 @@
 In this assignment we will revisit the city of Chicago's employee salary file using Python. You may only use built-in python functions in this assignment (so no `pandas` or `numpy` if you're already familiar with those).
 
 ## A: CSV parser
-First you will parse the `salaries.csv` using a function called `read_salaries` that takes the filename as a parameter. So your function should have a signature like so:
+Parse the `salaries.csv` using a function called `read_salaries` that takes the filename as a parameter. So your function should have a signature like so:
 ```python
 def read_salaries(filename):
     ...
 ```
 
-Put your function in a file called `helper.py` so that it will be accessible in the rest of the problem set through a `helper` module.
+Put your function in a file called `helper.py` so that it will be accessible in the rest of the problem set through a `helper` module. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additoinally you should ignore/remove the first (header) line.
 
-Your parser should do the following:
- 1. Read each line, ignoring/removing the first (header) line
- 2. Split each line on the ',' and return a nested list where each element is itself a list of fields.
- 3. Note that this will split the first field as well because there is a comma separating last and first name. This is fine. However, there will be a double quote at the beginning of the last name field and the end of the first name field. Remove these characters. Also remove extra white space from the beginning of the first name field.
- 4. The first name may have a middle name. Remove it by splitting on ' ' and keeping the first element.
- 5. Convert salaries, when present, to number by first removing the dollar sign and then using hte type conversion function `float`.
- 
 ## B: Additional helper functions
 In the `helper.py` function also implement the following functions to be used in part C below.
 
@@ -41,4 +34,9 @@ Repeat the analysis from assignment 1 using the `helper` module you developed in
 Do the following additional analysis:
 
 7. What is the most common first name? (4 points)
-7. What are the minimum, 25th percentile, mean, median, 75th percentile, and maximum salaries? In addition to the `percentile` and `mean` helpers you wrote, you may use the built-in python functions `min` and `max`.
+Note that when you split on ',' in your parser, you separated the employee first and last and first names. However, there will be a double quote at the beginning of the last name field and the end of the first name field. So:
+    - Remove these characters.
+    - Also remove extra white space from the beginning of the first name field.
+    - Also the first name may have a middle name. Remove it by splitting on ' ' and keeping the first element.
+
+8. What are the minimum, 25th percentile, mean, median, 75th percentile, and maximum salaries? In addition to the `percentile` and `mean` helpers you wrote, you may use the built-in python functions `min` and `max`. You'll need to update your parser to convert salaries, when present, to a number. Hint: first removing the dollar sign and then using the type conversion function `float`.
