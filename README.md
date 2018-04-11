@@ -4,7 +4,7 @@ In this assignment we will revisit the city of Chicago's employee salary file us
 ## A: Helpers
 Write the following functions in order to complete part B. Put them in a file called `helper.py` in the assignment's directory so that they will be accessible in the rest of the problem set in python through a `helper` module. When you accept the assignment you will find a template `helper.py` file with function signatures and some hints.
 
- 1. `read_salaries(filename)`: Parse the included `salaries.csv` file. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additionally you should ignore/remove the first (header) line. (4 points)
+ 1. `read_salaries()`: Parse the included `salaries.csv` file. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additionally you should ignore/remove the first (header) line. (4 points)
  2. `get_column(data, column_index)`: Given a 2d list `data` and an integer `column_index` (e.g. 0 for last name, 3 for department), return a (one dimensional) list of values for that column. (4 points)
  3. `count(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs. (4 points)
  4. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value. (4 points)
