@@ -1,23 +1,15 @@
 # Assignment 3: Data Manipulation with Python
 In this assignment we will revisit the city of Chicago's employee salary file using Python. You may only use built-in python functions in this assignment (so no `pandas` or `numpy` if you're already familiar with those).
 
-## A: CSV parser
-Parse the `salaries.csv` using a function called `read_salaries` that takes the filename as a parameter. So your function should have a signature like so:
-```python
-def read_salaries(filename):
-    ...
-```
+## A: Helpers
+Write the following functions in order to complete part B. Put them in a file called `helper.py` in the assignment's directory so that they will be accessible in the rest of the problem set in python through a `helper` module. When you accept the assignment you will find a template `helper.py` file with function signatures and some hints.
 
-Put your function in a file called `helper.py` so that it will be accessible in the rest of the problem set through a `helper` module. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additoinally you should ignore/remove the first (header) line.
-
-## B: Additional helper functions
-In the `helper.py` function also implement the following functions to be used in part C below.
-
- 1. `get_column(data, column_index)`: Given a 2d list `data` and an integer `column_index` (e.g. 0 for last name, 3 for department), return a (one dimensional) list of values for that column (4 points).
- 2. `count(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs (4 points).
- 3. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value (4 points).
- 4. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean
- 5. `median(numbers)`: given a list of numbers calculat the median. Your function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic:
+ 1. `read_salaries(filename)`: Parse the salaries CSV file. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additoinally you should ignore/remove the first (header) line.
+ 2. `get_column(data, column_index)`: Given a 2d list `data` and an integer `column_index` (e.g. 0 for last name, 3 for department), return a (one dimensional) list of values for that column (4 points).
+ 3. `count(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs (4 points).
+ 4. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value (4 points).
+ 5. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean
+ 6. `median(numbers)`: given a list of numbers calculat the median. Your function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic:
  
     If `p*len(numbers)` is not an integer, take the average between the adjacent elements in the sorted list. For example, when `p=.5` and len(numbers) is 6, `percentile(numbers, p)` should return the average between the 3rd and 4th items in the sorted list.
     
