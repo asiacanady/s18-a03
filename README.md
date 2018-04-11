@@ -4,12 +4,12 @@ In this assignment we will revisit the city of Chicago's employee salary file us
 ## A: Helpers
 Write the following functions in order to complete part B. Put them in a file called `helper.py` in the assignment's directory so that they will be accessible in the rest of the problem set in python through a `helper` module. When you accept the assignment you will find a template `helper.py` file with function signatures and some hints.
 
- 1. `read_salaries(filename)`: Parse the included `salaries.csv` file. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additoinally you should ignore/remove the first (header) line. (4 points)
+ 1. `read_salaries(filename)`: Parse the included `salaries.csv` file. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additionally you should ignore/remove the first (header) line. (4 points)
  2. `get_column(data, column_index)`: Given a 2d list `data` and an integer `column_index` (e.g. 0 for last name, 3 for department), return a (one dimensional) list of values for that column. (4 points)
  3. `count(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs. (4 points)
  4. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value. (4 points)
  5. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean. (4 points)
- 6. `median(numbers)`: given a list of numbers calculat the median. (4 points)
+ 6. `median(numbers)`: given a list of numbers calculate the median. (4 points)
 
     Your function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic:
  
@@ -43,6 +43,6 @@ Note that when you split on ',' in your parser, you separated the employee first
     - Also remove extra white space from the beginning of the first name field.
     - Also the first name may have a middle name. Remove it by splitting on ' ' and keeping the first element.
 
-8. What are the minimum, 25th percentile, mean, median, 75th percentile, and maximum salaries? (8 points)
+8. What are the minimum, mean, median, and maximum salaries? (8 points)
 
 In addition to the `percentile` and `mean` helpers you wrote, you may use the built-in python functions `min` and `max`. You'll need to update `helper.read_salaries` to convert salaries, when present, to a number. Hint: first removing the dollar sign and then using the type conversion function `float`. Also be sure to ignore missing salaries (for wage workers) in your calculations here.
