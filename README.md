@@ -19,7 +19,9 @@ In the `helper.py` function also implement the following functions to be used in
  4. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean
  5. `percentile(numbers, p)`: given a list of numbers expand the example from class to calculate the `p`-th percentile, i.e. the `p*len(numbers)` element in the sorted list.
  
-    If `p*len(numbers)` is not an integer, you should take the average between the adjacent elements in the sorted lists.. For example, when `p=.5` and len(numbers) is 6, `percentile(numbers, p)` should return the average between the 3rd and 4th items in the sorted list. 
+    If `p*len(numbers)` is not an integer, you should take the average between the adjacent elements in the sorted lists.. For example, when `p=.5` and len(numbers) is 6, `percentile(numbers, p)` should return the average between the 3rd and 4th items in the sorted list.
+    
+    Your function should *not* modify `numbers` inplace.
 
 ## C: Analysis of salaries
 Repeat the analysis from assignment 1 using the `helper` module you developed in parts A and B.
@@ -39,4 +41,4 @@ Note that when you split on ',' in your parser, you separated the employee first
     - Also remove extra white space from the beginning of the first name field.
     - Also the first name may have a middle name. Remove it by splitting on ' ' and keeping the first element.
 
-8. What are the minimum, 25th percentile, mean, median, 75th percentile, and maximum salaries? In addition to the `percentile` and `mean` helpers you wrote, you may use the built-in python functions `min` and `max`. You'll need to update your parser to convert salaries, when present, to a number. Hint: first removing the dollar sign and then using the type conversion function `float`.
+8. What are the minimum, 25th percentile, mean, median, 75th percentile, and maximum salaries? In addition to the `percentile` and `mean` helpers you wrote, you may use the built-in python functions `min` and `max`. You'll need to update your parser to convert salaries, when present, to a number. Hint: first removing the dollar sign and then using the type conversion function `float`. Also be sure to ignore missing salaries (for wage workers) in your calculations here.
