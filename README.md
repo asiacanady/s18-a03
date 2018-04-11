@@ -17,11 +17,21 @@ In the `helper.py` function also implement the following functions to be used in
  2. `count(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs (4 points).
  3. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value (4 points).
  4. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean
- 5. `percentile(numbers, p)`: given a list of numbers expand the example from class to calculate the `p`-th percentile, i.e. the `p*len(numbers)` element in the sorted list.
+ 5. `median(numbers)`: given a list of numbers calculat the median. Your function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic:
  
-    If `p*len(numbers)` is not an integer, you should take the average between the adjacent elements in the sorted lists.. For example, when `p=.5` and len(numbers) is 6, `percentile(numbers, p)` should return the average between the 3rd and 4th items in the sorted list.
+    If `p*len(numbers)` is not an integer, take the average between the adjacent elements in the sorted list. For example, when `p=.5` and len(numbers) is 6, `percentile(numbers, p)` should return the average between the 3rd and 4th items in the sorted list.
     
-    Your function should *not* modify `numbers` inplace.
+    You can check that your function is working at the interactive interpretter:
+    
+    ```python
+    >>> import helper
+    >>> helper.median([5,3,1,2,4])
+    3
+    >>> helper.median([4,1,2,3])
+    2.5
+    ```
+    
+    
 
 ## C: Analysis of salaries
 Repeat the analysis from assignment 1 using the `helper` module you developed in parts A and B.
