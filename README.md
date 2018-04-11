@@ -19,7 +19,7 @@ In the `helper.py` function also implement the following functions to be used in
  4. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean
  5. `percentile(numbers, p)`: given a list of numbers expand the example from class to calculate the `p`-th percentile, i.e. the `p*len(numbers)` element in the sorted list.
  
- If `p*len(numbers)` is not an integer, you should take the average between the adjacent elements in the sorted lists.. For example, when `p=.5` and len(numbers) is 6, `percentile(numbers, p)` should return the average between the 3rd and 4th items in the sorted list. 
+    If `p*len(numbers)` is not an integer, you should take the average between the adjacent elements in the sorted lists.. For example, when `p=.5` and len(numbers) is 6, `percentile(numbers, p)` should return the average between the 3rd and 4th items in the sorted list. 
 
 ## C: Analysis of salaries
 Repeat the analysis from assignment 1 using the `helper` module you developed in parts A and B.
