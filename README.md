@@ -35,17 +35,17 @@ B.4: How many employees in the police department (4 points)?
 
 B.5: How many detectives (4 points)?
 
-B.6: What is the largest department (4 points)?
+B.6: What is the largest department? Note that `q6.py` is already written for you and will work if you implemented the helper functions correctly. (0 ponts)
 
 Do the following additional analysis:
 
-B.7: What is the most common first name? (8 points)
+B.7: What is the most common first name? Again, `q7.py` is written for you. What you'll need to do is modify the parser: (4 points)
 
 Note that when you split on ',' in your parser, you separated the employee first and last and first names. However, there will be a double quote at the beginning of the last name field and the end of the first name field. So update `helper.read_salaries` to:
     - Remove these characters.
     - Also remove extra white space from the beginning of the first name field.
     - Also the first name may have a middle name. Remove it by splitting on ' ' and keeping the first element.
 
-B.8: What are the minimum, mean, median, and maximum salaries? (8 points)
+B.8: What are the minimum, mean, median, and maximum salaries? (4 points)
 
-In addition to the `mean` and `median` helpers you wrote, you may use the built-in python functions `min` and `max`. You'll need to update `helper.read_salaries` to convert salaries, when present, to a number. Hint: first removing the dollar sign and then using the type conversion function `float`. Also be sure to ignore missing salaries (for wage workers) in your calculations here.
+`q8.py` is partially written for you. You'll need to get the salaries from the data, ignoring/removing those that are empty (wage workers). You'll also need to update `helper.read_salaries` to convert salaries, when present, to a number. Hint: first remove the dollar sign and then use the type conversion function `float`.
