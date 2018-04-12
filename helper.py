@@ -17,7 +17,7 @@ def count(values, search_values):
 
 # A.4: Given a 1d list values (e.g. the result of get_column),
 # return a dictionary of value-count pairs.
-def count(values):
+def counts(values):
     return {}
 
 # A.5: Given a dictionary d with numeric values, return a list [key, value] of two elements,
