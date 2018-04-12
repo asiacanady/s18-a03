@@ -12,11 +12,7 @@ Write the following 7 functions. You will use them later to complete part B. Put
  6. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean. (4 points)
  7. `median(numbers)`: given a list of numbers calculate the median. (4 points)
 
-    Your median function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic:
- 
-    If `len(numbers)` is odd, take the middle element in the sorted list. If 'len(numbers)' is even, there will be two adjacent "middle" elements in the sorted list. Take the average between them. 
-    
-    You can check that your median function is working using the interactive interpretter:
+    Your median function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic: If `len(numbers)` is odd, take the middle element in the sorted list. If 'len(numbers)' is even, there will be two adjacent "middle" elements in the sorted list. Take the average between them. You can check that your median function is working using the interactive interpretter:
     
     ```python
     >>> import helper
