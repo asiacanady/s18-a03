@@ -6,10 +6,11 @@ Write the following functions in order to complete part B. Put them in a file ca
 
  1. `read_salaries()`: Parse the included `salaries.csv` file. Your parser should split each line on ',' and return a nested list where each element is itself a list of fields. Additionally you should ignore/remove the first (header) line. (4 points)
  2. `get_column(data, column_index)`: Given a 2d list `data` and an integer `column_index` (e.g. 0 for last name, 3 for department), return a (one dimensional) list of values for that column. (4 points)
- 3. `count(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs. (4 points)
- 4. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value. (4 points)
- 5. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean. (4 points)
- 6. `median(numbers)`: given a list of numbers calculate the median. (4 points)
+ 3. `count(values, search_value)`: Given a 1d list of `values` (e.g. the result of `get_column`), return the number of elements that are equal to `search_value`.
+ 4. `counts(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs. (4 points)
+ 5. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value. (4 points)
+ 6. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean. (4 points)
+ 7. `median(numbers)`: given a list of numbers calculate the median. (4 points)
 
     Your function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic:
  
@@ -29,7 +30,7 @@ Write the following functions in order to complete part B. Put them in a file ca
 Repeat the analysis from assignment 1 using the `helper` module you developed in part A. Put your solution to B.1 in `q1.py`, B.2 in `q2.py` and so on. Each question has a template python script to get you started.
 
 1. How many employees does the city have (4 points)?
-2. How many full time employees (4 points)?
+2. How many full time employees (4 points)? Hint: use `get_column()` and `count()` above.
 3. How many part-time employees (4 points)?
 4. How many employees in the police department (4 points)?
 5. How many detectives (4 points)?
