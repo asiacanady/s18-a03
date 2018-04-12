@@ -3,6 +3,6 @@ import helper
 
 data = helper.read_salaries()
 names = helper.get_column(data, 1)
-counts = helper.count(names)
+counts = helper.counts(names)
 
 print(helper.dict_max_value(counts))
