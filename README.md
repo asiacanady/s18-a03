@@ -4,22 +4,26 @@ In this assignment we will revisit the city of Chicago's employee salary file us
 ## Part A: Helpers
 Write the following 7 functions. You will use them later to complete part B. Put these 7 Part A functions in a file called `helper.py` in the assignment's directory so that they will be accessible in the rest of the problem set in python through a `helper` module. When you accept the assignment you will find a template `helper.py` file with function signatures and some hints.
 
- 1. `read_salaries()`: Parse the included `salaries.csv` file. (4 points)
- 
- Your parser should:
-    - Split each line on `','` and return a nested list where each element is itself a list of fields.
-    - Ignore/remove the first (header) line. 
-    - Remove the dollar sign from the salary field.
- 
- 2. `get_column(data, column_index)`: Given a 2d list `data` and an integer `column_index` (e.g. 0 for last name, 3 for department), return a (one dimensional) list of values for that column. (4 points)
- 3. `count(values, search_value)`: Given a 1d list of `values` (e.g. the result of `get_column`), return the number of elements that are equal to `search_value`.
- 4. `counts(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs. (4 points)
- 5. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value. (4 points)
- 6. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean. (4 points)
- 7. `median(numbers)`: given a list of numbers calculate the median. (4 points)
+1. `read_salaries()`: Parse the included `salaries.csv` file. (4 points) Your parser should:
+
+  - Split each line on `','` and return a nested list where each element is itself a list of fields.
+  - Ignore/remove the first (header) line.
+  - Remove the dollar sign from the salary field.
+
+2. `get_column(data, column_index)`: Given a 2d list `data` and an integer `column_index` (e.g. 0 for last name, 3 for department), return a (one dimensional) list of values for that column. (4 points)
+
+3. `count(values, search_value)`: Given a 1d list of `values` (e.g. the result of `get_column`), return the number of elements that are equal to `search_value`.
+
+4. `counts(values)`: Given a 1d list `values` (e.g. the result of `get_column`), return a dictionary of value-count pairs. (4 points)
+
+5. `dict_max_value(d)`: Given a dictionary `d` with numeric values, return a list `[key, value]` of two elements, where `key` is the the key in `d` with the largest value, and `value` is it's value. (4 points)
+
+6. `mean(numbers)`: given a list of numbers use the built-in functions `sum` and `len` to return their mean. (4 points)
+
+7. `median(numbers)`: given a list of numbers calculate the median. (4 points)
 
     Your median function should *not* modify `numbers` inplace. Expand the example from class to work when `len(numbers)` is even using the following logic: If `len(numbers)` is odd, take the middle element in the sorted list. If 'len(numbers)' is even, there will be two adjacent "middle" elements in the sorted list. Take the average between them. You can check that your median function is working using the interactive interpretter:
-    
+
     ```python
     >>> import helper
     >>> helper.median([5,3,1,2,4])
