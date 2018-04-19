@@ -2,7 +2,7 @@
 import helper
 
 data = helper.read_salaries()
-departments = helper.get_column(data, 3)  # get department column
-counts = helper.counts(departments)       # count departments
+departments = helper.get_column(data, 3) # get department column
+counts = helper.counts(departments) # count departments
 
-print(helper.dict_max_value(counts))      # print maximum
+print(helper.dict_max_value(counts)) # print maximum
